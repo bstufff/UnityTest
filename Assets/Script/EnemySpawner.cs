@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-
+     
+   
     [Header("References")]
     [SerializeField] private GameObject[] enemyPrefabs;//Array contenant les prefabs des ennemis 
     [Header("Attributes")]
@@ -58,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        
         /*Exemple de wave
         Wave wave1 = new Wave(1,new List<EnemyFormation>{ 
             new EnemyFormation(new List<EnemyGroup> {
