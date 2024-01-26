@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
 using UnityEngine;
 
@@ -74,6 +76,10 @@ public class EnemySpawner : MonoBehaviour
 
     public Transform ParentGameObject;
     
+    public List<GameObject> Enemy = new List<GameObject>();
+
+
+    
     IEnumerator StartWave(Wave waveToSpawn)
     {
         for (int i = 0; i < waveToSpawn.amountOfFormations; i++)//Boucle des formations
@@ -87,12 +93,38 @@ public class EnemySpawner : MonoBehaviour
                 {
                   GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
                   InstancietedObj.transform.parent = ParentGameObject;
+                  Enemy.Add(InstancietedObj);
                   yield return new WaitForSeconds(4);//D�lai entre les spawns
                 }
             }
         }
         yield return new WaitForSeconds(15);//D�lai de 15 secondes apr�s la fin d'une vague
         //Maybe un moyen visuel d'indiquer ce d�lai entre les vagues ?
+    }
+
+    public GameObject Index0A;
+
+    
+    public void Update()
+    {
+        SpriteRenderer spriterenderer;
+        GameObject Index0B;
+        if (Enemy.Count != 0)
+        {
+            Index0A = Enemy[0];
+            Index0B = Enemy[0];
+            spriterenderer = Enemy[0].GetComponent<SpriteRenderer>();
+            Debug.Log("oui1");
+            if (spriterenderer.enabled == false)
+            {
+
+                Enemy.RemoveAt(0);
+                Index0B = Enemy[0];
+                GameObject.Destroy(Index0A);
+                Index0A = Index0B;
+                Debug.Log("oui2");
+            }
+        }
     }
 
 

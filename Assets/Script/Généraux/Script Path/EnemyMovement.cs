@@ -12,18 +12,24 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;//Point we want to move to
     private int pathIndex = 0;//Index du chemin 
+    public GameObject levelmanager;
+    public SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];//Here equals 0 (First point)
+       
     }
+    
+
     private void Update()
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.1f) {//Si la distance entre l'ennemi et le point est de moins de 0.1, il passe au point suivant
             pathIndex++;//Passe au prochain point
            
             if (pathIndex == LevelManager.main.path.Length) {//Si l'index des points du chemin est la même que la longueur de la liste "path", détruire l'ennemi
-                Destroy(gameObject);//no shit
+                spriteRenderer.enabled = false;
+                //Destroy(gameObject);//no shit
                 //foutre le code pour enlever les vies
                 return;
             }
