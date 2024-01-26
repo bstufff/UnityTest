@@ -12,12 +12,13 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField]private List<Wave> waveList = new List<Wave>();//Liste contenant toutes les waves du jeu
     [System.Serializable]
+
     public class EnemyGroup
     {
         public int pathTaken;//Chemin pris par les ennemis
         public int amountOfEnemies;//Quantité d'ennemis dans le groupe
         public int enemyType;//Type d'ennemi : entier correspondant à la position du prefab séléctionné dans enemyPrefabs
-        public EnemyGroup(int _pathTaken, int _amountOfEnemies, int _enemyType)//Fonction pour initialisation
+        public EnemyGroup(int _pathTaken, int _amountOfEnemies, int _enemyType)//constructeur
         {
             pathTaken = _pathTaken;
             amountOfEnemies = _amountOfEnemies;
@@ -32,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
         public int numberOfGroups;//no shit
         public int spacing;//spacing de 1 = 0.1s entre les spawn
         public int delay = 0;//délai avant le lancement de cette formation, si = 0 la formation commencera à spawn juste après la fin de la précédente
-        public EnemyFormation(List<EnemyGroup> _formation, int _numberOfGroups, int _spacing, int _delay)//Fonction pour initialisation
+        public EnemyFormation(List<EnemyGroup> _formation, int _numberOfGroups, int _spacing, int _delay)//Constructeur
         {
             numberOfGroups = _numberOfGroups;
             Formation = _formation;
@@ -43,9 +44,9 @@ public class EnemySpawner : MonoBehaviour
     [System.Serializable]
     public class Wave
     {
-        public int amountOfFormations;//no shit
+        public int amountOfFormations;
         public List<EnemyFormation> waveContents = new List<EnemyFormation>();//Liste des formations d'ennemis contenues dans la vague
-        public Wave(int _amountOfFormations, List<EnemyFormation> _waveContents)//Fonction pour initialisation
+        public Wave(int _amountOfFormations, List<EnemyFormation> _waveContents)//Constructeur
         {
             amountOfFormations = _amountOfFormations;
             waveContents = _waveContents;
@@ -71,6 +72,8 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public Transform ParentGameObject;
+    
     IEnumerator StartWave(Wave waveToSpawn)
     {
         for (int i = 0; i < waveToSpawn.amountOfFormations; i++)//Boucle des formations
@@ -82,12 +85,20 @@ public class EnemySpawner : MonoBehaviour
                 EnemyGroup currentGroup = currentFormation.Formation[j];//Séléctionne le groupe d'ennemis
                 for (int k = 0; k < currentGroup.amountOfEnemies; k++)//Boucle des ennemis
                 {
-                    Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
-                    yield return new WaitForSeconds(4);//Délai entre les spawns
+                  GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
+                  InstancietedObj.transform.parent = ParentGameObject;
+                  GameObject Parent = GameObject.Find("Enemy");
+                  Parent.transform.parent = ParentGameObject;
+                  yield return new WaitForSeconds(4);//Délai entre les spawns
                 }
             }
         }
         yield return new WaitForSeconds(15);//Délai de 15 secondes après la fin d'une vague
         //Maybe un moyen visuel d'indiquer ce délai entre les vagues ?
     }
+
+
+
+
+
 }
