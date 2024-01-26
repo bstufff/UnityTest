@@ -87,8 +87,6 @@ public class EnemySpawner : MonoBehaviour
                 {
                   GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
                   InstancietedObj.transform.parent = ParentGameObject;
-                  GameObject Parent = GameObject.Find("Enemy");
-                  Parent.transform.parent = ParentGameObject;
                   yield return new WaitForSeconds(4);//D�lai entre les spawns
                 }
             }

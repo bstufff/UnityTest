@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,6 @@ public class ColliderandRange : MonoBehaviour
 
             enemy = range.GetComponent<Transform>();
             targetposition = enemy.position;
-            Debug.Log("OUI");
 
         }
   
