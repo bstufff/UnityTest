@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 297672949093729355}
-  moveSpeed: 0
+  moveSpeed: 50
+  DistanceLeft: 0
 --- !u!114 &436439772000033741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   Pv: 10
   DegatsMob: 10
   DegatsChateau: 10
-  Speed: 50
+  Speed: 100
   ValeurGold: 10
 --- !u!114 &-6144550259987984023
 MonoBehaviour:
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!58 &3160717917826684120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,4 +196,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 0.5

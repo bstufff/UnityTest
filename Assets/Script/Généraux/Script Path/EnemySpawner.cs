@@ -56,7 +56,10 @@ public class EnemySpawner : MonoBehaviour
     }
 
 
+    public void Test(GameObject _dead) {
+        Debug.Log("the name is : " + _dead.name);
 
+    }
 
 
     private void Start()
@@ -91,10 +94,10 @@ public class EnemySpawner : MonoBehaviour
                 EnemyGroup currentGroup = currentFormation.Formation[j];//S�l�ctionne le groupe d'ennemis
                 for (int k = 0; k < currentGroup.amountOfEnemies; k++)//Boucle des ennemis
                 {
-                  GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
-                  InstancietedObj.transform.parent = ParentGameObject;
-                  Enemy.Add(InstancietedObj);
-                  yield return new WaitForSeconds(4);//D�lai entre les spawns
+                    GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
+                    InstancietedObj.transform.parent = ParentGameObject;
+                    Enemy.Add(InstancietedObj);
+                    yield return new WaitForSeconds(4);//D�lai entre les spawns
                 }
             }
         }
@@ -106,7 +109,7 @@ public class EnemySpawner : MonoBehaviour
 
     
     public void Update()
-    {
+    {/*
         SpriteRenderer spriterenderer;
         GameObject Index0B;
         if (Enemy.Count != 0)
@@ -124,7 +127,7 @@ public class EnemySpawner : MonoBehaviour
                 Index0A = Index0B;
                 Debug.Log("oui2");
             }
-        }
+        }*/
     }
 
 
