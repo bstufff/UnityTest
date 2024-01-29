@@ -6,18 +6,19 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb;//Rigidbody de l'ennemi : pour l'assigner il faut dragndrop sous unity le rigidbody de l'ennemi dans le champ corre
+    [SerializeField] public Rigidbody2D rb;//Rigidbody de l'ennemi : pour l'assigner il faut dragndrop sous unity le rigidbody de l'ennemi dans le champ corre
 
-    [Header("Attributes")]
-    [SerializeField] public float moveSpeed;//Valeur par défaut de la vitesse
+    public float moveSpeed;//Valeur par défaut de la vitesse
 
-    private Transform target;//Point we want to move to
-    private int pathIndex = 0;//Index du chemin 
+    public Transform target;//Point we want to move to
+    public int pathIndex = 0;//Index du chemin 
     public float DistanceLeft;
-    private float DistanceLeftOfOtherCheckPoints;
+    public float DistanceLeftOfOtherCheckPoints;
     [SerializeField] private List<float> PathLengths;
-    private void Start()
+    public void Start()
     {
+        Variables speedReference = GetComponent<Variables>();
+        moveSpeed = speedReference.Speed;
         target = LevelManager.main.path[pathIndex];//Here equals 0 (First point)
         PathLengths = new List<float> { Vector2.Distance(LevelManager.main.startPoint.position, LevelManager.main.path[0].position) };
         for (int i = 0; i < LevelManager.main.path.Length - 1; i++)
@@ -28,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         DistanceLeftOfOtherCheckPoints = DistanceLeft - PathLengths[0];
 
     }
-    private void Update()
+    public void Update()
     {
         DistanceLeft = Vector2.Distance(transform.position, LevelManager.main.path[pathIndex].position) + DistanceLeftOfOtherCheckPoints;
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
@@ -52,7 +53,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
     }
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         Vector2 direction = (target.position - transform.position).normalized;//Regarde le point
 
