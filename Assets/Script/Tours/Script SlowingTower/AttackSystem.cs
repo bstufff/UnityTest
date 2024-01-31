@@ -12,10 +12,6 @@ public class AttackSystem : MonoBehaviour
 
     public EnemyMovement AcctualEnemy;
     public SpriteRenderer SlowingTowerZone;
-    public void Start()
-    {
-        
-    }
     public void OnTriggerEnter2D(Collider2D col)
     {
         AcctualEnemy = col.GetComponent<EnemyMovement>();
