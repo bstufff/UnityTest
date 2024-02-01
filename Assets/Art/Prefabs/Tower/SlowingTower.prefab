@@ -86,7 +86,7 @@ MonoBehaviour:
   VitesseAv: 0
   EnemyInRange: []
   AcctualEnemy: {fileID: 0}
-  SlowingTowerZone: {fileID: 0}
+  SlowingTowerZone: {fileID: 3647467757255670494}
 --- !u!1 &6882388598081300111
 GameObject:
   m_ObjectHideFlags: 0
