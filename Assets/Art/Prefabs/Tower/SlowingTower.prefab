@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6134168875337794204}
   m_Layer: 0
   m_Name: SlowingTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +86,7 @@ MonoBehaviour:
   VitesseAv: 0
   EnemyInRange: []
   AcctualEnemy: {fileID: 0}
+  Variables: {fileID: 0}
   SlowingTowerZone: {fileID: 3647467757255670494}
 --- !u!1 &6882388598081300111
 GameObject:

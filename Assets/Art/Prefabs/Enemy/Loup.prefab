@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6921724166535621201}
   - component: {fileID: -1628988731536521206}
   - component: {fileID: 7768885695388653715}
+  - component: {fileID: 6663492870081064329}
+  - component: {fileID: -7248669330780099388}
   m_Layer: 0
   m_Name: Loup
   m_TagString: Loup
@@ -211,3 +213,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   spriteRenderer: {fileID: 0}
+--- !u!114 &6663492870081064329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873023168267383931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pv: 5
+  DegatsMob: 10
+  DegatsChateau: 10
+  Speed: 50
+  ValeurGold: 20
+--- !u!114 &-7248669330780099388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873023168267383931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263a996f7fa063c4b9e472235218291b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Archer: 0
+  Mage: 0
+  Mortier: 0
+  Caserne: 1
+  SlowingTower: 1
