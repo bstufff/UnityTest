@@ -1,4 +1,4 @@
-Problème conflit projet suite à mon mauvais commit; changement de répertoire projet.
+Problème conflit projet suite à  un mauvais commit; changement de répertoire projet.
 
 1ere choses à faire (map et logique du jeu)(stb)
 map : fait avec carré sur scène unity > fait
