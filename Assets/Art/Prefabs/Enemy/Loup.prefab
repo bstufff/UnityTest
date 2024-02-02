@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2279022700814237372}
   - component: {fileID: 7847762856748889071}
   - component: {fileID: 6921724166535621201}
-  - component: {fileID: -1628988731536521206}
   - component: {fileID: 7768885695388653715}
   - component: {fileID: 6663492870081064329}
   - component: {fileID: -7248669330780099388}
@@ -176,29 +175,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2279022700814237372}
-  moveSpeed: 100
+  moveSpeed: 0
   target: {fileID: 0}
   pathIndex: 0
   DistanceLeft: 0
   DistanceLeftOfOtherCheckPoints: 0
   PathLengths: []
---- !u!114 &-1628988731536521206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4873023168267383931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pv: 5
-  DegatsMob: 15
-  DegatsChateau: 15
-  Speed: 100
-  ValeurGold: 20
 --- !u!114 &7768885695388653715
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5500989809133857071}
   - component: {fileID: 6177749147559098159}
-  - component: {fileID: -1033378834909886190}
   - component: {fileID: -3284991126931489110}
+  - component: {fileID: -1033378834909886190}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Tower
@@ -171,21 +171,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1033378834909886190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626942623825472819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6add931cee4f6ae40a5606528d56d09e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  targetposition: {x: 0, y: 0, z: 0}
-  EnemiesInRange: []
 --- !u!58 &-3284991126931489110
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -221,3 +206,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!114 &-1033378834909886190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626942623825472819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6add931cee4f6ae40a5606528d56d09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  targetposition: {x: 0, y: 0, z: 0}
+  EnemiesInRange: []

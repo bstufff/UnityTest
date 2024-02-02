@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] public Rigidbody2D rb;//Rigidbody de l'ennemi : pour l'assigner il faut dragndrop sous unity le rigidbody de l'ennemi dans le champ corre
 
     public float moveSpeed;//Valeur par défaut de la vitesse
+
     public Transform target;//Point we want to move to
     public int pathIndex = 0;//Index du chemin 
     public float DistanceLeft;
@@ -27,7 +29,6 @@ public class EnemyMovement : MonoBehaviour
         DistanceLeftOfOtherCheckPoints = DistanceLeft - PathLengths[0];
 
     }
-    
     public void Update()
     {
         DistanceLeft = Vector2.Distance(transform.position, LevelManager.main.path[pathIndex].position) + DistanceLeftOfOtherCheckPoints;
@@ -47,7 +48,8 @@ public class EnemyMovement : MonoBehaviour
             {
                 target = LevelManager.main.path[pathIndex];//Assigne la position du point au prochain élément dans la liste
 
-            }
+                }
+                
         }
 
     }
