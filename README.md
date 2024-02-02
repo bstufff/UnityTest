@@ -8,3 +8,5 @@ logique : argent (set la valeur)
 chateau : set la valeur point de vie et le nom de la classe d'entitée qui peuvent lui faire des dégats > fait
 spawn : > fait
 emplacement de tours : boutton, menu(choix tours), nom game object tours.(stb) > fait
+
+Problème conflit projet suite à mon mauvais commit; changement de répertoire projet.
