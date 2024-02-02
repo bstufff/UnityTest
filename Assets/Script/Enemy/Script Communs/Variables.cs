@@ -13,13 +13,3 @@ public class Variables : MonoBehaviour
     public int ValeurGold = 15;
 
 }
-
-[Serializable]
-public class IsVisibleBy : MonoBehaviour
-{
-    public bool Archer = false;
-    public bool Mage = false;
-    public bool Mortier = false;
-    public bool Caserne = true;
-    public bool SlowingTower = false;
-}
