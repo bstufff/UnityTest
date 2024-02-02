@@ -1,3 +1,4 @@
+this is hell
 Problème conflit projet suite à  un mauvais commit; changement de répertoire projet.
 
 1ere choses à faire (map et logique du jeu)(stb)
