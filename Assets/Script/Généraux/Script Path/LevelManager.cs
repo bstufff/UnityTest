@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    //test
     public static LevelManager main;
 
     public Transform startPoint;
