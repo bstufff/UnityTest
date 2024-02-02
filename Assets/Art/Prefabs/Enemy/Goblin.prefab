@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 3669427513677661857}
   - component: {fileID: 3638868529563278677}
   - component: {fileID: 297672949093729355}
+  - component: {fileID: 3160717917826684120}
   - component: {fileID: 6382460696470993270}
   - component: {fileID: 436439772000033741}
   - component: {fileID: -6144550259987984023}
-  - component: {fileID: 3160717917826684120}
+  - component: {fileID: 8557566543164304556}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Goblin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5225458845006413038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65, y: 2.64, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 200
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,56 +117,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6382460696470993270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225458845006413038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44ccfb65b76ec24cb9504466e796fcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 297672949093729355}
-  moveSpeed: 50
-  target: {fileID: 0}
-  pathIndex: 0
-  DistanceLeft: 0
-  DistanceLeftOfOtherCheckPoints: 0
-  PathLengths: []
---- !u!114 &436439772000033741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225458845006413038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pv: 10
-  DegatsMob: 10
-  DegatsChateau: 10
-  Speed: 25
-  ValeurGold: 10
---- !u!114 &-6144550259987984023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225458845006413038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb206a8bfc63a34585802afee0c6ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!58 &3160717917826684120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -201,3 +152,70 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6382460696470993270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44ccfb65b76ec24cb9504466e796fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 297672949093729355}
+  moveSpeed: 0
+  target: {fileID: 0}
+  pathIndex: 0
+  DistanceLeft: 0
+  DistanceLeftOfOtherCheckPoints: 0
+  PathLengths: []
+--- !u!114 &436439772000033741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pv: 10
+  DegatsMob: 10
+  DegatsChateau: 10
+  Speed: 50
+  ValeurGold: 10
+--- !u!114 &-6144550259987984023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb206a8bfc63a34585802afee0c6ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+--- !u!114 &8557566543164304556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263a996f7fa063c4b9e472235218291b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Archer: 1
+  Mage: 1
+  Mortier: 1
+  Caserne: 1
+  SlowingTower: 1

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6134168875337794204}
   m_Layer: 0
   m_Name: SlowingTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4448405792610634743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 736.4999, y: 583.80115, z: -3.255141}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,8 +84,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cout: 50
   VitesseAv: 0
+  EnemyInRange: []
   AcctualEnemy: {fileID: 0}
-  SlowingTowerZone: {fileID: 0}
+  Variables: {fileID: 0}
+  SlowingTowerZone: {fileID: 3647467757255670494}
 --- !u!1 &6882388598081300111
 GameObject:
   m_ObjectHideFlags: 0

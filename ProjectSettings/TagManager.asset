@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - LevelManager
+  - Loup
+  - Goblin
+  - Tower
   layers:
   - Default
   - TransparentFX

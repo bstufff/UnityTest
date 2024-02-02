@@ -19,6 +19,10 @@ public class ColliderandRange : MonoBehaviour
     {
         EnemiesInRange.Add(collision.gameObject);
         GetPosition();
+        int gold = collision.GetComponent<Variables>().ValeurGold;
+        collision.GetComponent<Variables>().ValeurGold = gold-5;
+
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -26,10 +30,12 @@ public class ColliderandRange : MonoBehaviour
         if (EnemiesInRange.Count != 0) { 
             GetPosition();
         }
+        Debug.Log(other.GetComponent<Variables>().ValeurGold);
     }
     private void FixedUpdate()
     {
         GetPosition();
+        
     }
 
     public void GetPosition() 
@@ -40,7 +46,7 @@ public class ColliderandRange : MonoBehaviour
             float FirstsDistance=-1;
             foreach (GameObject enemy in EnemiesInRange)
             {
-                if (FirstsDistance == -1) {
+                if (First == null) {
                     First = enemy;
                     FirstsDistance = First.GetComponent<EnemyMovement>().DistanceLeft;
                 }
@@ -59,7 +65,6 @@ public class ColliderandRange : MonoBehaviour
         }
             
     }
-
 
 
 
