@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mouvementallies : MonoBehaviour
 {
-
+    //test
     public void Update()
     {
         if (Input.GetMouseButtonDown(1)) 
