@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 161062803064115306}
   - component: {fileID: -3783718443293058202}
   - component: {fileID: -3528375971720655653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chevalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,10 +112,10 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

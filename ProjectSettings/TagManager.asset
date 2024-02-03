@@ -8,16 +8,18 @@ TagManager:
   - Loup
   - Goblin
   - Tower
+  - Chaman
+  - Chevalier
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Tower
+  - Ally
+  - Power
   - 
   - 
   - 
