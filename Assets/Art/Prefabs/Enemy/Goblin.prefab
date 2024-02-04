@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pv: 10
-  PvMax: 10
+  Pv: 20
+  PvMax: 20
   DegatsMob: 10
   DegatsChateau: 10
   Speed: 50
