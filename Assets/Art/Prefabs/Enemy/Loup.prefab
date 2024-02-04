@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7768885695388653715}
   - component: {fileID: 6663492870081064329}
   - component: {fileID: -7248669330780099388}
+  - component: {fileID: 8000209728832173665}
   m_Layer: 3
   m_Name: Loup
   m_TagString: Loup
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2941451757571009284}
 --- !u!114 &6663492870081064329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +214,8 @@ MonoBehaviour:
   DegatsChateau: 10
   Speed: 50
   ValeurGold: 20
+  Encombat: 0
+  Ensupport: 0
 --- !u!114 &-7248669330780099388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,3 +233,17 @@ MonoBehaviour:
   Mortier: 0
   Caserne: 1
   SlowingTower: 1
+--- !u!114 &8000209728832173665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873023168267383931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781cf549cfdfe7e4288e71122a2df6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Crois\xE9sList": []
+  "Crois\xE9s": []

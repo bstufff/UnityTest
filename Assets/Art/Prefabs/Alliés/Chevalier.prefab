@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 161062803064115306}
   - component: {fileID: -3783718443293058202}
   - component: {fileID: -3528375971720655653}
+  - component: {fileID: -4433844991075548129}
+  - component: {fileID: 3395095417886760099}
   m_Layer: 7
   m_Name: Chevalier
   m_TagString: Untagged
@@ -159,5 +161,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a031c82115fb2b4587896ea4881b8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4433844991075548129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384943950203196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pv: 10
+  PvMax: 10
+  DegatsMob: 10
+  DegatsChateau: 0
+  Speed: 0
+  ValeurGold: 0
+--- !u!114 &3395095417886760099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384943950203196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f2769d83a57c34eb68f94e5881dff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

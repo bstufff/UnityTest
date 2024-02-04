@@ -12,7 +12,8 @@ public class Variables : MonoBehaviour
     public int DegatsChateau = 10;
     public float Speed = 3f;
     public int ValeurGold = 15;
-
+    public bool Encombat = false;
+    public bool Ensupport = false;
     public void CorrectionHeal() 
     {
         if (Pv > PvMax) 

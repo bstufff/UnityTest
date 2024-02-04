@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8139079701642060589}
   - component: {fileID: 6334098021041036907}
   - component: {fileID: 6499991805365953211}
+  - component: {fileID: 7242387223650957065}
   m_Layer: 3
   m_Name: Chaman
   m_TagString: Chaman
@@ -293,3 +294,19 @@ MonoBehaviour:
   DegatsChateau: 10
   Speed: 3
   ValeurGold: 15
+  Encombat: 0
+  Ensupport: 0
+--- !u!114 &7242387223650957065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530690039678018800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781cf549cfdfe7e4288e71122a2df6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Crois\xE9sList": []
+  "Crois\xE9s": []

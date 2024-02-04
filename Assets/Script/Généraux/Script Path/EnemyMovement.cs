@@ -31,6 +31,8 @@ public class EnemyMovement : MonoBehaviour
     }
     public void Update()
     {
+        Variables speedReference = GetComponent<Variables>();
+        moveSpeed = speedReference.Speed;
         DistanceLeft = Vector2.Distance(transform.position, LevelManager.main.path[pathIndex].position) + DistanceLeftOfOtherCheckPoints;
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {//Si la distance entre l'ennemi et le point est de moins de 0.1, il passe au point suivant
@@ -48,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 target = LevelManager.main.path[pathIndex];//Assigne la position du point au prochain élément dans la liste
 
-                }
+            }
                 
         }
 

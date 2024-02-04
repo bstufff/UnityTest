@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 436439772000033741}
   - component: {fileID: -6144550259987984023}
   - component: {fileID: 8557566543164304556}
+  - component: {fileID: 5237059372288569103}
   m_Layer: 3
   m_Name: Goblin
   m_TagString: Goblin
@@ -189,6 +190,8 @@ MonoBehaviour:
   DegatsChateau: 10
   Speed: 50
   ValeurGold: 10
+  Encombat: 0
+  Ensupport: 0
 --- !u!114 &-6144550259987984023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +223,15 @@ MonoBehaviour:
   Mortier: 1
   Caserne: 1
   SlowingTower: 1
+--- !u!114 &5237059372288569103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781cf549cfdfe7e4288e71122a2df6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
