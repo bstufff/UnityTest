@@ -19,10 +19,15 @@ public class Mort : MonoBehaviour
         if (enemy != null && enemy.Pv <= 0)
         {
             spriteRenderer.enabled = false;
-            Debug.Log("mort");
+            StartCoroutine(DelaiDie());
             //Gold += enemy.ValeurGold;
             //
             //GameObject.Destroy(gameObject);
+        }
+        IEnumerator DelaiDie() 
+        { 
+            yield return new WaitForSeconds(0.2f);
+            Destroy(gameObject);
         }
     }
 }

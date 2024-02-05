@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -3528375971720655653}
   - component: {fileID: -4433844991075548129}
   - component: {fileID: 3395095417886760099}
+  - component: {fileID: 117547939480794382}
+  - component: {fileID: 1624604264637501057}
   m_Layer: 7
   m_Name: Chevalier
   m_TagString: Untagged
@@ -123,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21133333}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1
 --- !u!50 &-3783718443293058202
 Rigidbody2D:
   serializedVersion: 4
@@ -177,10 +179,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pv: 10
   PvMax: 10
-  DegatsMob: 10
+  DegatsMob: 5
   DegatsChateau: 0
   Speed: 0
   ValeurGold: 0
+  Encombat: 0
+  Ensupport: 0
 --- !u!114 &3395095417886760099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,5 +195,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57f2769d83a57c34eb68f94e5881dff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnnemisList: []
+  Ennemis: {fileID: 0}
+  IndexList: 0
+--- !u!114 &117547939480794382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384943950203196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb206a8bfc63a34585802afee0c6ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  spriteRenderer: {fileID: 3679186188612892402}
+--- !u!114 &1624604264637501057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384943950203196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75a63f2356ca1a46afa7a8f875760c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -10,6 +10,7 @@ TagManager:
   - Tower
   - Chaman
   - Chevalier
+  - Golem
   layers:
   - Default
   - TransparentFX
