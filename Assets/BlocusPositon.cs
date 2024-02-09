@@ -5,20 +5,16 @@ using UnityEngine;
 public class BlocusPositon : MonoBehaviour
 {
     public Transform CurrentTarget;
-    public float speed = 200f; //get component
-    public Vector3 mouvement;
-     
+    public Vector3 direction;
+
+
     public void Update()
     {
         if (CurrentTarget != null) 
         { 
-            Vector3 direction = CurrentTarget.position - transform.position;
+            direction = CurrentTarget.position - transform.position;
 
-            direction.Normalize();
-
-            mouvement = direction*speed*Time.deltaTime;
-
-             
+            direction.Normalize();      
 
         }
         

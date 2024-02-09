@@ -21,8 +21,10 @@ public class AttaqueEnnemisCorroutine : MonoBehaviour
         Reff = gameObject.GetComponent<AttaqueEnnemis>();
         Enattente = true;
         yield return new WaitForSeconds(2f);
-
-        Reff.Croisés[0].Pv -= Reff.Ennemis.DegatsMob;
+        if (Reff.Croisés.Count > 0) 
+        {
+            Reff.Croisés[0].Pv -= Reff.Ennemis.DegatsMob;
+        }
 
         Enattente = false;
 

@@ -182,7 +182,8 @@ MonoBehaviour:
   PvMax: 50
   DegatsMob: 8
   DegatsChateau: 0
-  Speed: 0
+  Speed: 50
+  SpeedB: 50
   ValeurGold: 0
   Encombat: 0
   Ensupport: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
   EnnemisList: []
   Ennemis: {fileID: 0}
   IndexList: 0
+  SpeedB: 0
 --- !u!114 &117547939480794382
 MonoBehaviour:
   m_ObjectHideFlags: 0

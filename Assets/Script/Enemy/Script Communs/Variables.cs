@@ -11,6 +11,7 @@ public class Variables : MonoBehaviour
     public int DegatsMob = 10;
     public int DegatsChateau = 10;
     public float Speed = 3f;
+    public float SpeedB = 3f;
     public int ValeurGold = 15;
     public bool Encombat = false;
     public bool Ensupport = false;

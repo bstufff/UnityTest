@@ -214,6 +214,7 @@ MonoBehaviour:
   DegatsMob: 10
   DegatsChateau: 10
   Speed: 45
+  SpeedB: 45
   ValeurGold: 20
   Encombat: 0
   Ensupport: 0
@@ -250,6 +251,7 @@ MonoBehaviour:
   Ennemis: {fileID: 0}
   "Crois\xE9sList": []
   "Crois\xE9s": []
+  layerName: Ally
 --- !u!114 &-4265783110775087433
 MonoBehaviour:
   m_ObjectHideFlags: 0

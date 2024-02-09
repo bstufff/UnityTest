@@ -5,13 +5,18 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ChevalierMouvement : MonoBehaviour
 {
+    Variables speed;
+    public void Start()
+    {
+        speed = gameObject.GetComponent<Variables>();
+    }
     public void Update()
     {
         BlocusPositon Target = FindObjectOfType<BlocusPositon>();
         if (Target.CurrentTarget != null)
         {
-            Vector3 move = Target.mouvement;
-            transform.Translate(move);
+            Vector3 mouvement = Target.direction * speed.Speed * Time.deltaTime;
+            transform.Translate(mouvement);
             Target.CurrentTarget.position += Vector3.forward * Time.deltaTime;
         }
         

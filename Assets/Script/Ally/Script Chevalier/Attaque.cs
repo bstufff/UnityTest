@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Attaque : MonoBehaviour
 {
@@ -9,6 +13,7 @@ public class Attaque : MonoBehaviour
     public List<Variables> EnnemisList = new List<Variables>();
     public Variables Ennemis;
     public int IndexList;
+    public float SpeedB;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,16 +24,22 @@ public class Attaque : MonoBehaviour
         Ennemis = EnnemisList[0];
         if(Croisés.Ensupport == true)
         {
+            
             Ennemis = EnnemisList[IndexList];
 
         }
         Ennemis.Pv -= Croisés.DegatsMob;
-        Debug.Log("enter");
+        if (Croisés.Encombat == false || Croisés.Ensupport == false) 
+        {
+            SpeedB = Croisés.Speed;
+            Croisés.Speed = 0f;
+        }
     }   
     public void OnTriggerExit2D(Collider2D collision)
     {
         IndexList = EnnemisList.IndexOf(collision.GetComponent<Variables>());
         EnnemisList.RemoveAt(IndexList);
+        Refresh();
         if(EnnemisList.Count != 0)
         {
             Croisés.Encombat = false;
@@ -40,6 +51,12 @@ public class Attaque : MonoBehaviour
             Croisés.Encombat = false;
             Croisés.Ensupport = false;
         }
-        Debug.Log("exit");
+        Croisés.Speed = SpeedB;
+    }
+    public void Refresh()
+    {
+#if UNITY_EDITOR
+        EditorUtility.SetDirty(gameObject);
+#endif
     }
 }

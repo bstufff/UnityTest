@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11166a84de150f24ea597121fc4f9b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colliders: []
-  speed: 5
+  CurrentTarget: {fileID: 0}
+  speed: 25
   mouvement: {x: 0, y: 0, z: 0}
 --- !u!114 &9140919615439731945
 MonoBehaviour:

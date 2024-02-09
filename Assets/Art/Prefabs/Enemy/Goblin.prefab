@@ -185,11 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pv: 15
+  Pv: 500
   PvMax: 15
   DegatsMob: 5
   DegatsChateau: 10
-  Speed: 45
+  Speed: 25
+  SpeedB: 25
   ValeurGold: 10
   Encombat: 0
   Ensupport: 0
