@@ -14,6 +14,7 @@ public class Caserne : MonoBehaviour
         Poscaserne = GetComponent<Transform>();
         Instantiate(Chevalier, Poscaserne.position ,Quaternion.identity);
         Instantiate(Chevalier, Poscaserne.position , Quaternion.identity);
+        Instantiate(Chevalier, Poscaserne.position, Quaternion.identity);
         //additionner vecteur si on veut un décalage par rapport à l'origine
 
     }

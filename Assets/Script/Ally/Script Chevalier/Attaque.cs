@@ -23,7 +23,7 @@ public class Attaque : MonoBehaviour
 
         }
         Ennemis.Pv -= Croisés.DegatsMob;
-        
+        Debug.Log("enter");
     }   
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -40,6 +40,6 @@ public class Attaque : MonoBehaviour
             Croisés.Encombat = false;
             Croisés.Ensupport = false;
         }
-        
+        Debug.Log("exit");
     }
 }

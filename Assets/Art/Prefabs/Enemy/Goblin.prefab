@@ -144,10 +144,10 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 1472
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 1472
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pv: 20
-  PvMax: 20
-  DegatsMob: 10
+  Pv: 15
+  PvMax: 15
+  DegatsMob: 5
   DegatsChateau: 10
-  Speed: 50
+  Speed: 45
   ValeurGold: 10
   Encombat: 0
   Ensupport: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 3638868529563278677}
 --- !u!114 &8557566543164304556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   Ennemis: {fileID: 0}
   "Crois\xE9sList": []
   "Crois\xE9s": []
+  layerName: Ally
 --- !u!114 &-4339791265428640800
 MonoBehaviour:
   m_ObjectHideFlags: 0

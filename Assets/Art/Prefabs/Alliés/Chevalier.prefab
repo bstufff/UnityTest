@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3395095417886760099}
   - component: {fileID: 117547939480794382}
   - component: {fileID: 1624604264637501057}
+  - component: {fileID: 5129961170669486239}
   m_Layer: 7
   m_Name: Chevalier
   m_TagString: Untagged
@@ -123,7 +124,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
 --- !u!50 &-3783718443293058202
@@ -177,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pv: 10
-  PvMax: 10
-  DegatsMob: 5
+  Pv: 50
+  PvMax: 50
+  DegatsMob: 8
   DegatsChateau: 0
   Speed: 0
   ValeurGold: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f2769d83a57c34eb68f94e5881dff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "Crois\xE9s": {fileID: 0}
   EnnemisList: []
   Ennemis: {fileID: 0}
   IndexList: 0
@@ -224,5 +226,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d75a63f2356ca1a46afa7a8f875760c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reff: {fileID: 0}
+  Enattente: 0
+--- !u!114 &5129961170669486239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384943950203196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717b831e7947ce147be00043384df162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
