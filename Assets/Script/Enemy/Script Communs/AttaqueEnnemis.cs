@@ -30,33 +30,35 @@ public class AttaqueEnnemis : MonoBehaviour
 
             CroisésList.Add(otherVariables);
 
-            if (CroisésList.Count > 0 && CroisésList[0].Encombat == false)
+            if (CroisésList.Count > 0 && CroisésList[0].Encombat == false)// null reff exp && le premier croisé est pas en combat
             {
                 Croisés.Add(otherVariables);
             }
 
-            if (Croisés.Count > 0 && Croisés[0].Encombat == false)
+            if (CroisésList.Count > 0 && CroisésList[0].Encombat == false)// null reff exp && le premier croisé est pas en combat
             {
+                Debug.LogWarning("SUPPORT TRUE");
                 Ennemis.Encombat = true;
                 Ennemis.Speed = 0;
             }
 
-            if (Croisés.Count > 0)
+            if (CroisésList.Count > 0)
             {
-                Croisés[0].Encombat = true;
+                CroisésList[0].Encombat = true;
                 Croisés[0].Pv -= Ennemis.DegatsMob;
 
-                if (Croisés.Count >= 2 && Croisés[1].Encombat == false)
+                if (CroisésList.Count >= 2 && CroisésList[1].Encombat == false)
                 {
-                    Croisés[1].Ensupport = true;
+                    CroisésList[1].Ensupport = true;
                 }
 
-                if (Croisés.Count >= 3 && Croisés[1].Encombat == false && Croisés[2].Encombat == false)
+                if (CroisésList.Count >= 3 && CroisésList[1].Encombat == false && CroisésList[2].Encombat == false)
                 {
-                    Croisés[1].Ensupport = true; // OPTIONNEL
-                    Croisés[2].Ensupport = true;
+                    CroisésList[1].Ensupport = true;
+                    CroisésList[2].Ensupport = true;
                 }
             }
+
         }
     }
     public void OnTriggerStay2D(Collider2D col) 

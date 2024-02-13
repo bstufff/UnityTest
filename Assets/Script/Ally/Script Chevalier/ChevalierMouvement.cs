@@ -13,7 +13,7 @@ public class ChevalierMouvement : MonoBehaviour
     public void Update()
     {
         BlocusPositon Target = FindObjectOfType<BlocusPositon>();
-        if (Target.CurrentTarget != null)
+        if (Target.CurrentTarget != null && speed.Encombat != true)
         {
             Vector3 mouvement = Target.direction * speed.Speed * Time.deltaTime;
             transform.Translate(mouvement);
