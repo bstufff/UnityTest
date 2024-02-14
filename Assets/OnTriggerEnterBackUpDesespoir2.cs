@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnTriggerEnterBackUpDesespoir : MonoBehaviour
+public class OnTriggerEnterBackUpDesespoir2 : MonoBehaviour
 {
     public string layerName = "Ally"; // Le nom du layer à filtrer
 
@@ -56,8 +56,21 @@ public class OnTriggerEnterBackUpDesespoir : MonoBehaviour
                     EnnemyAttack.CroisésList[2].Ensupport = true;
                 }
             }
+            HashSet<Variables> merge = new HashSet<Variables>();
+
+            foreach (Variables v in EnnemyAttack.CroisésList)
+            {
+                merge.Add(v);
+            }
+            foreach (Variables v in EnnemyAttack.CroisésList)
+            {
+                merge.Add(v);
+            }
+            foreach (Variables v in EnnemyAttack.CroisésList)
+            {
+                merge.Add(v);
+            }
+            EnnemyAttack.CroisésList = new List<Variables>(merge);
         }
     }
 }
-
-

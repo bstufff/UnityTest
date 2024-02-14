@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 8557566543164304556}
   - component: {fileID: 5237059372288569103}
   - component: {fileID: -4339791265428640800}
+  - component: {fileID: -8266669773162502871}
+  - component: {fileID: 3160666258193086888}
   m_Layer: 3
   m_Name: Goblin
   m_TagString: Goblin
@@ -237,7 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781cf549cfdfe7e4288e71122a2df6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedB: 0
   Ennemis: {fileID: 0}
   "Crois\xE9sList": []
   "Crois\xE9s": []
@@ -256,3 +257,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reff: {fileID: 0}
   Enattente: 0
+--- !u!114 &-8266669773162502871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b80852be66c027419b6ee092f3ceaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: Ally
+--- !u!114 &3160666258193086888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225458845006413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb33546341d927344ae1c24779af287c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

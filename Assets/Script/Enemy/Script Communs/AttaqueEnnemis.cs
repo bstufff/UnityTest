@@ -25,11 +25,12 @@ public class AttaqueEnnemis : MonoBehaviour
     {
         if ((((int)1 << other.gameObject.layer) & layerMask) != 0)
         {
-            Debug.Log("exe");
             Ennemis = GetComponent<Variables>();
             Variables otherVariables = other.GetComponent<Variables>();
-
-            CroisésList.Add(otherVariables);
+            if (otherVariables.Encombat == false) 
+            { 
+                CroisésList.Add(otherVariables); 
+            }
 
             if (CroisésList.Count > 0 && CroisésList[0].Encombat == false)// null reff exp && le premier croisé est pas en combat
             {
@@ -38,18 +39,14 @@ public class AttaqueEnnemis : MonoBehaviour
 
             if (CroisésList.Count > 0 && CroisésList[0].Encombat == false)// null reff exp && le premier croisé est pas en combat
             {
-                Debug.LogWarning("SUPPORT TRUE");
                 Ennemis.Encombat = true;
                 Ennemis.Speed = 0;
             }
-
+            // pour encombat
             if (CroisésList.Count > 0)
             {
                 CroisésList[0].Encombat = true;
-                if (Croisés.Count > 0) 
-                { 
-                    Croisés[0].Pv -= Ennemis.DegatsMob; 
-                }
+                CroisésList[0].Ensupport = false;
                 
 
                 if (CroisésList.Count >= 2 && CroisésList[1].Encombat == false)
@@ -63,6 +60,7 @@ public class AttaqueEnnemis : MonoBehaviour
                     CroisésList[2].Ensupport = true;
                 }
             }
+           
 
         }
     }
@@ -84,23 +82,27 @@ public class AttaqueEnnemis : MonoBehaviour
             if (Croisés.Count > 0)
             {
                 Croisés.RemoveAt(0);
-                Refresh();
+                
             }
             CroisésList.RemoveAt(pos);
-            Refresh();
             if (Croisés.Count == 0 && Ennemis.Encombat == true)
             {
                 Ennemis.Encombat = false;
             }
-            Ennemis.Speed = SpeedB;
-
-            
-
+            List<Variables> OK = new List<Variables>();
+            foreach(Variables v in CroisésList) 
+            {
+                if (v != null) 
+                { 
+                    OK.Add(v);
+                }
+            }
+            CroisésList = OK;
+            if (CroisésList.Count == 0)
+            {
+                Ennemis.Speed = SpeedB;
+            }
         }
-
-
-
-       
     }
     public void Refresh()
     {

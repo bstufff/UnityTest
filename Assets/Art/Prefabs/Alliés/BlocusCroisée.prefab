@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5999039868105860667}
   - component: {fileID: 9140919615439731945}
   - component: {fileID: 8308518799430501247}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: "BlocusCrois\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentTarget: {fileID: 0}
-  speed: 25
-  mouvement: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &9140919615439731945
 MonoBehaviour:
   m_ObjectHideFlags: 0

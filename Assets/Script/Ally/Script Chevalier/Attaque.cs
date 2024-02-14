@@ -17,7 +17,6 @@ public class Attaque : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
         EnnemisList.Add(other.GetComponent<Variables>());
         IndexList = EnnemisList.IndexOf(other.GetComponent<Variables>());   
         Croisés = GetComponent<Variables>();
@@ -28,7 +27,6 @@ public class Attaque : MonoBehaviour
 
         if(Croisés.Ensupport == true)// si le croisé est en support
         {
-            Debug.Log("SUPPORT TRUE");
             if (IndexList >= 0 && IndexList < EnnemisList.Count)
             {
                 Ennemis = EnnemisList[IndexList];
@@ -67,6 +65,10 @@ public class Attaque : MonoBehaviour
             Croisés.Speed = SpeedB;
         }
         
+    }
+    private void Update()
+    {
+        Refresh();
     }
     public void Refresh()
     {

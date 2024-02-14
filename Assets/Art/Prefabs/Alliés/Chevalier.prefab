@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 117547939480794382}
   - component: {fileID: 1624604264637501057}
   - component: {fileID: 5129961170669486239}
-  - component: {fileID: 8750630674444701140}
   m_Layer: 7
   m_Name: Chevalier
   m_TagString: Untagged
@@ -243,17 +242,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 717b831e7947ce147be00043384df162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8750630674444701140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384943950203196846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b80852be66c027419b6ee092f3ceaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
