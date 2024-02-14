@@ -21,16 +21,18 @@ public class Attaque : MonoBehaviour
         EnnemisList.Add(other.GetComponent<Variables>());
         IndexList = EnnemisList.IndexOf(other.GetComponent<Variables>());   
         Croisés = GetComponent<Variables>();
-        Ennemis = EnnemisList[0];
+        if (EnnemisList.Count > 0) 
+        { 
+            Ennemis = EnnemisList[0]; 
+        }
+
         if(Croisés.Ensupport == true)// si le croisé est en support
         {
             Debug.Log("SUPPORT TRUE");
-            Ennemis = EnnemisList[IndexList];
-            Ennemis.Speed = 0f;
-            if (EnnemisList.Count >= 2) 
+            if (IndexList >= 0 && IndexList < EnnemisList.Count)
             {
-                Croisés.Ensupport = false;
-                Croisés.Encombat = true;
+                Ennemis = EnnemisList[IndexList];
+                Ennemis.Speed = 0f;
             }
 
         }
@@ -41,23 +43,30 @@ public class Attaque : MonoBehaviour
             Croisés.Speed = 0f;
         }
     }   
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D other)
     {
-        IndexList = EnnemisList.IndexOf(collision.GetComponent<Variables>());
-        EnnemisList.RemoveAt(IndexList);
-        Refresh();
-        if(EnnemisList.Count != 0)//si il reste un ennemis
+        if (EnnemisList.Count > 0)
         {
-            Croisés.Encombat = false;
-            Croisés.Ensupport = true;
-            Ennemis = EnnemisList[0];
-        } 
-        if(EnnemisList.Count == 0)//si il n'y a plus d'ennemis
-        {
-            Croisés.Encombat = false;
-            Croisés.Ensupport = false;
+            IndexList = EnnemisList.IndexOf(other.GetComponent<Variables>());
+            if (IndexList >= 0 && IndexList < EnnemisList.Count)
+            {
+                EnnemisList.RemoveAt(IndexList);
+                Refresh();
+            } 
+            if (EnnemisList.Count != 0)//si il reste un ennemis
+            {
+                Croisés.Encombat = false;
+                Croisés.Ensupport = true;
+                Ennemis = EnnemisList[0];
+            }
+            if (EnnemisList.Count == 0)//si il n'y a plus d'ennemis
+            {
+                Croisés.Encombat = false;
+                Croisés.Ensupport = false;
+            }
+            Croisés.Speed = SpeedB;
         }
-        Croisés.Speed = SpeedB;
+        
     }
     public void Refresh()
     {

@@ -25,6 +25,7 @@ public class AttaqueEnnemis : MonoBehaviour
     {
         if ((((int)1 << other.gameObject.layer) & layerMask) != 0)
         {
+            Debug.Log("exe");
             Ennemis = GetComponent<Variables>();
             Variables otherVariables = other.GetComponent<Variables>();
 
@@ -45,7 +46,11 @@ public class AttaqueEnnemis : MonoBehaviour
             if (CroisésList.Count > 0)
             {
                 CroisésList[0].Encombat = true;
-                Croisés[0].Pv -= Ennemis.DegatsMob;
+                if (Croisés.Count > 0) 
+                { 
+                    Croisés[0].Pv -= Ennemis.DegatsMob; 
+                }
+                
 
                 if (CroisésList.Count >= 2 && CroisésList[1].Encombat == false)
                 {
@@ -80,15 +85,16 @@ public class AttaqueEnnemis : MonoBehaviour
             {
                 Croisés.RemoveAt(0);
                 Refresh();
-                CroisésList.RemoveAt(pos);
-                Refresh();
-                if (Croisés.Count == 0 && Ennemis.Encombat == true)
-                {
-                    Ennemis.Encombat = false;
-                }
-                Ennemis.Speed = SpeedB;
-
             }
+            CroisésList.RemoveAt(pos);
+            Refresh();
+            if (Croisés.Count == 0 && Ennemis.Encombat == true)
+            {
+                Ennemis.Encombat = false;
+            }
+            Ennemis.Speed = SpeedB;
+
+            
 
         }
 

@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5761306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5761307}
+  m_Layer: 0
+  m_Name: Ennemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5761307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 926.8516, y: 489.63336, z: 0.65416634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &300864484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1027,7 +1058,7 @@ PrefabInstance:
     - target: {fileID: 7136378695618743340, guid: 717f7008db63fda4ebd5aba4adc1bca4, type: 3}
       propertyPath: ParentGameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5761307}
     - target: {fileID: 7154267169842364958, guid: 717f7008db63fda4ebd5aba4adc1bca4, type: 3}
       propertyPath: m_Color.g
       value: 0.27058825
@@ -1384,3 +1415,4 @@ SceneRoots:
   - {fileID: 598080766}
   - {fileID: 1294694508}
   - {fileID: 300864484}
+  - {fileID: 5761307}
