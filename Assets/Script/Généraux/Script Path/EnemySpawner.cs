@@ -10,15 +10,24 @@ public class EnemySpawner : MonoBehaviour
     [Header("Attributes")]
 
     [SerializeField] private List<Wave> waveList = new List<Wave>();//Liste contenant toutes les waves du jeu
+    [SerializeField] private List<Path> pathList = new List<Path>();
     [System.Serializable]
-
+    public class Path
+    {
+        public int pathNumber;
+        public Transform startPoint;
+        public Transform[] PathContents;
+    }
+    [System.Serializable]
     public class EnemyGroup
     {
-        public int pathTaken;//Chemin pris par les ennemis
+        public Path pathTaken;//Chemin pris par les ennemis
+        public int pathNumber;
         public int amountOfEnemies;//Quantité d'ennemis dans le groupe
         public int enemyType;//Type d'ennemi : entier correspondant à la position du prefab séléctionné dans enemyPrefabs
-        public EnemyGroup(int _pathTaken, int _amountOfEnemies, int _enemyType)//constructeur
+        public EnemyGroup(Path _pathTaken, int _amountOfEnemies, int _enemyType)//constructeur
         {
+            pathNumber = _pathTaken.pathNumber;
             pathTaken = _pathTaken;
             amountOfEnemies = _amountOfEnemies;
             enemyType = _enemyType;
@@ -86,15 +95,21 @@ public class EnemySpawner : MonoBehaviour
                 EnemyGroup currentGroup = currentFormation.Formation[j];//Séléctionne le groupe d'ennemis
                 for (int k = 0; k < currentGroup.amountOfEnemies; k++)//Boucle des ennemis
                 {
-                    GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], LevelManager.main.startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
-                    InstancietedObj.transform.parent = ParentGameObject;
-                    Enemy.Add(InstancietedObj);
-                    yield return new WaitForSeconds(4);//D lai entre les spawns
+                    StartCoroutine(SpawnGroup(currentGroup));
                 }
             }
         }
         yield return new WaitForSeconds(15);//Délai de 15 secondes apr s la fin d'une vague
         //Maybe un moyen visuel d'indiquer ce délai entre les vagues ?
+    }
+    IEnumerator SpawnGroup(EnemyGroup currentGroup) 
+    {
+        GameObject InstancietedObj = Instantiate(enemyPrefabs[currentGroup.enemyType], pathList[currentGroup.pathNumber].startPoint.position, Quaternion.identity);//Fait apparaitre un ennemi
+        InstancietedObj.GetComponent<EnemyMovement>().SetPath(pathList, currentGroup.pathNumber);
+        InstancietedObj.transform.parent = ParentGameObject;
+        Enemy.Add(InstancietedObj);
+
+        yield return new WaitForSeconds(4);//Délai entre les spawns
     }
 
     public GameObject Index0A;
