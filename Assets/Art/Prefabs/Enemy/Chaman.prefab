@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 6499991805365953211}
   - component: {fileID: 7242387223650957065}
   - component: {fileID: 6694755848452946044}
+  - component: {fileID: 356767206596924830}
+  - component: {fileID: 1272591491766384982}
   m_Layer: 3
   m_Name: Chaman
   m_TagString: Chaman
@@ -263,6 +265,11 @@ MonoBehaviour:
   DistanceLeft: 0
   DistanceLeftOfOtherCheckPoints: 0
   PathLengths: []
+  pathArray: []
+  pathTaken:
+    pathNumber: 0
+    startPoint: {fileID: 0}
+    PathContents: []
 --- !u!114 &6334098021041036907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781cf549cfdfe7e4288e71122a2df6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedB: 0
   Ennemis: {fileID: 0}
   "Crois\xE9sList": []
   "Crois\xE9s": []
@@ -329,3 +335,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reff: {fileID: 0}
   Enattente: 0
+--- !u!114 &356767206596924830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530690039678018800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b80852be66c027419b6ee092f3ceaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: Ally
+--- !u!114 &1272591491766384982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530690039678018800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb33546341d927344ae1c24779af287c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: Ally
