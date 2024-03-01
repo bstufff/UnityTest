@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -51,7 +53,8 @@ public class EnemyMovement : MonoBehaviour
             if (pathIndex == pathTaken.PathContents.Length)
             {//Si l'index des points du chemin est la même que la longueur de la liste "path", détruire l'ennemi
                 Destroy(gameObject);//no shit
-                //foutre le code pour enlever les vies
+                PertePv pertePv = FindObjectOfType<PertePv>();
+                pertePv.EnemyArrival(transform);
                 return;
             }
             else
@@ -65,8 +68,21 @@ public class EnemyMovement : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        Vector2 direction = (target.position - transform.position).normalized;//Regarde le point
+        Vector2 direction = (target.position - transform.position).normalized;//Crée le vecteur de direction
+
+        Vector3 dir = target.transform.position - transform.position;//Se tourne vers la localisation désirée
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         rb.velocity = direction * moveSpeed;//Se déplace vers le point
+    }
+    private void Rotate(Vector2 targetPosition) {
+        // Convertir le Vector2 en Vector3 en fixant la coordonnée Z à 0
+        Vector3 targetPos = new Vector3(targetPosition.x, targetPosition.y, 0f);
+
+        // Faire en sorte que l'objet regarde vers la position cible
+        Vector2 direction = targetPos - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }

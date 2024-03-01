@@ -20,9 +20,12 @@ public class Mort : MonoBehaviour
         {
             spriteRenderer.enabled = false;
             StartCoroutine(DelaiDie());
-            //Gold += enemy.ValeurGold;
-            //
-            //GameObject.Destroy(gameObject);
+            MoneyScript moneyScript = FindObjectOfType<LevelManager>().GetComponent<MoneyScript>();//récupère l'argent que possède le joueur
+            if (moneyScript != null )
+            {
+                moneyScript.money += enemy.ValeurGold;
+            }
+            Destroy(gameObject);
         }
         IEnumerator DelaiDie() 
         { 
