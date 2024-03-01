@@ -76,13 +76,4 @@ public class EnemyMovement : MonoBehaviour
 
         rb.velocity = direction * moveSpeed;//Se déplace vers le point
     }
-    private void Rotate(Vector2 targetPosition) {
-        // Convertir le Vector2 en Vector3 en fixant la coordonnée Z à 0
-        Vector3 targetPos = new Vector3(targetPosition.x, targetPosition.y, 0f);
-
-        // Faire en sorte que l'objet regarde vers la position cible
-        Vector2 direction = targetPos - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
 }

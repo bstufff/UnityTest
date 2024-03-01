@@ -24,6 +24,7 @@ public class Mort : MonoBehaviour
             if (moneyScript != null )
             {
                 moneyScript.money += enemy.ValeurGold;
+                Debug.Log("Ennemi abbatu ! Le joueur gagne "+enemy.ValeurGold+" gold !");
             }
             Destroy(gameObject);
         }
