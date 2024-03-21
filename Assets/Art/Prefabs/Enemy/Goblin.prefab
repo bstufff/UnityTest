@@ -175,6 +175,11 @@ MonoBehaviour:
   DistanceLeft: 0
   DistanceLeftOfOtherCheckPoints: 0
   PathLengths: []
+  pathArray: []
+  pathTaken:
+    pathNumber: 0
+    startPoint: {fileID: 0}
+    PathContents: []
 --- !u!114 &436439772000033741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4d1fdd30a7a4499295b9e29a787f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pv: 500
-  PvMax: 15
+  Pv: 100
+  PvMax: 100
   DegatsMob: 5
   DegatsChateau: 10
   Speed: 25
@@ -282,3 +287,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb33546341d927344ae1c24779af287c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerName: Ally
